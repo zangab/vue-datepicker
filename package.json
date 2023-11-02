@@ -53,7 +53,7 @@
   },
   "peerDependencies": {
     "core-js": "^2.6.5",
-    "vue": "^2.6.10"
+    "vue": "^2.7.14"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
