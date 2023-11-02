@@ -2,4 +2,100 @@
  * Vue-datepicker v0.2.11
  * (c) 2019-2023 Mathieu Stanowski
  */
-!function(e,t){"object"==typeof exports&&"undefined"!=typeof module?t(exports,require("vue")):"function"==typeof define&&define.amd?define(["exports","vue"],t):t((e=e||self).VueDatepicker={},e.Vue)}(this,(function(e,t){"use strict";t=t&&Object.prototype.hasOwnProperty.call(t,"default")?t.default:t;var r=function(e){if(Array.isArray(e))return e};var n=function(e,t){if("undefined"!=typeof Symbol&&Symbol.iterator in Object(e)){var r=[],n=!0,o=!1,i=void 0;try{for(var a,u=e[Symbol.iterator]();!(n=(a=u.next()).done)&&(r.push(a.value),!t||r.length!==t);n=!0);}catch(e){o=!0,i=e}finally{try{n||null==u.return||u.return()}finally{if(o)throw i}}return r}};var o=function(e,t){(null==t||t>e.length)&&(t=e.length);for(var r=0,n=new Array(t);r<t;r++)n[r]=e[r];return n};var i=function(e,t){if(e){if("string"==typeof e)return o(e,t);var r=Object.prototype.toString.call(e).slice(8,-1);return"Object"===r&&e.constructor&&(r=e.constructor.name),"Map"===r||"Set"===r?Array.from(e):"Arguments"===r||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)?o(e,t):void 0}};var a=function(){throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")};var u=function(e,t){return r(e)||n(e,t)||i(e,t)||a()};var l={installed:!1,version:"0.2.11",install:function e(r){var n=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{};if(!e.installed){e.installed=!0,t!==r&&console.error("Multiple instances of Vue detected.");var o=n.components||{},i=n.options||{};r.prototype.$vuedatepicker=i,t.prototype.$vuedatepicker=i,Object.entries(o).forEach((function(e){var t=u(e,2),n=t[0],o=t[1];r.component(n,o)}))}}};e.default=l,Object.defineProperty(e,"__esModule",{value:!0})}));
+(function (global, factory) {
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('vue')) :
+  typeof define === 'function' && define.amd ? define(['exports', 'vue'], factory) :
+  (global = global || self, factory(global.VueDatepicker = {}, global.Vue));
+}(this, (function (exports, OurVue) { 'use strict';
+
+  OurVue = OurVue && Object.prototype.hasOwnProperty.call(OurVue, 'default') ? OurVue['default'] : OurVue;
+
+  function _arrayWithHoles(arr) {
+    if (Array.isArray(arr)) { return arr; }
+  }
+  var arrayWithHoles = _arrayWithHoles;
+
+  function _iterableToArrayLimit(arr, i) {
+    if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) { return; }
+    var _arr = [];
+    var _n = true;
+    var _d = false;
+    var _e = undefined;
+    try {
+      for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
+        _arr.push(_s.value);
+        if (i && _arr.length === i) { break; }
+      }
+    } catch (err) {
+      _d = true;
+      _e = err;
+    } finally {
+      try {
+        if (!_n && _i["return"] != null) { _i["return"](); }
+      } finally {
+        if (_d) { throw _e; }
+      }
+    }
+    return _arr;
+  }
+  var iterableToArrayLimit = _iterableToArrayLimit;
+
+  function _arrayLikeToArray(arr, len) {
+    if (len == null || len > arr.length) { len = arr.length; }
+    for (var i = 0, arr2 = new Array(len); i < len; i++) {
+      arr2[i] = arr[i];
+    }
+    return arr2;
+  }
+  var arrayLikeToArray = _arrayLikeToArray;
+
+  function _unsupportedIterableToArray(o, minLen) {
+    if (!o) { return; }
+    if (typeof o === "string") { return arrayLikeToArray(o, minLen); }
+    var n = Object.prototype.toString.call(o).slice(8, -1);
+    if (n === "Object" && o.constructor) { n = o.constructor.name; }
+    if (n === "Map" || n === "Set") { return Array.from(o); }
+    if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) { return arrayLikeToArray(o, minLen); }
+  }
+  var unsupportedIterableToArray = _unsupportedIterableToArray;
+
+  function _nonIterableRest() {
+    throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+  }
+  var nonIterableRest = _nonIterableRest;
+
+  function _slicedToArray(arr, i) {
+    return arrayWithHoles(arr) || iterableToArrayLimit(arr, i) || unsupportedIterableToArray(arr, i) || nonIterableRest();
+  }
+  var slicedToArray = _slicedToArray;
+
+  function install(Vue) {
+    var args = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+    if (install.installed) { return; }
+    install.installed = true;
+    if (OurVue !== Vue) {
+      console.error("Multiple instances of Vue detected.");
+    }
+    var components = args.components || {};
+    var options = args.options || {};
+    Vue.prototype.$vuedatepicker = options;
+    OurVue.prototype.$vuedatepicker = options;
+    Object.entries(components).forEach(function (_ref) {
+      var _ref2 = slicedToArray(_ref, 2),
+          name = _ref2[0],
+          component = _ref2[1];
+      Vue.component(name, component);
+    });
+  }
+
+  var VueDatePicker = {
+    installed: false,
+    version: "0.2.11",
+    install: install
+  };
+
+  exports.default = VueDatePicker;
+
+  Object.defineProperty(exports, '__esModule', { value: true });
+
+})));

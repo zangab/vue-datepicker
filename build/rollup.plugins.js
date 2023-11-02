@@ -79,7 +79,7 @@ const generatePlugins = (args) => [
   // -------------------------------------------
   cleanup(),
   buble(), // convert ES2015+
-  terser(), // minifiy
+  // terser(), // minifiy
   ...(args.snapshot ? [sizeSnapshot()] : []),
   ...(args.visualizer ? [visualizer()] : []),
 ];
