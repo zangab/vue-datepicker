@@ -100,8 +100,8 @@
     "rollup-plugin-vue": "4.2.0",
     "sass": "^1.26.5",
     "sass-loader": "^7.1.0",
-    "vue": "^2.6.10",
-    "vue-template-compiler": "^2.6.10"
+    "vue": "2.7.14",
+    "vue-template-compiler": "2.7.14"
   },
   "directories": {
     "test": "tests"
