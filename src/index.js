@@ -1,3 +1,3 @@
-import VueDatePicker from './framework';
+import VueDatePicker from './components/VDPicker';
 
 export default VueDatePicker;
